@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add to cart</title>
+
+    
+    
+    
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+
+
+
+<style>
+  .badge-notify{
+    background:red;
+    position:relative;
+    top: -20px;
+    right: 10px;
+  }
+  .my-cart-icon-affix {
+    position: fixed;
+    z-index: 999;
+  }
+  </style>
+<style>
+  .badge-notify{
+    background:red;
+    position:relative;
+    top: -20px;
+    right: 10px;
+  }
+  .my-cart-icon-affix {
+    position: fixed;
+    z-index: 999;
+  }
+  </style>
+
+
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-light text-dark bg-light">
+    <a class="navbar-brand text-dark" href="#" style="  font-family: Arial, sans-serif ; padding-left: 50px;">Let's Connect Asia</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <form class="form-inline my-2 my-lg-0 ml-5">
+        <input class="form-control mr-sm-2 border border-dark" type="search" placeholder="What are you looking for..." style="width: 600px; border: 2px;border-radius: 25px;font-family: Arial, sans-serif">
+        <button class="btn btn-outline-light my-2 my-sm-0 text-dark border border-dark" type="submit" style="border: 2px;border-radius: 25px;font-family: Arial, sans-serif">Search</button>
+      </form> 
+    <div class="collapse navbar-collapse ml-5" id="navbarNav" style="float: left;">
+      <ul class="navbar-nav text-dark">
+        <li class="nav-item active ">
+          <a class="nav-link ml-2" href="#" style="color: black;font-family: Arial, sans-serif">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item ">
+          <a class="nav-link ml-2" href="#" style="color: black;font-family: Arial, sans-serif">Sign In</a>
+        </li>
+        <li class="nav-item ">
+          <a class="nav-link ml-2" href="#" style="color: black; font-family: Arial, sans-serif">
+            <!-- <img src="cart.jpg" alt="" style="width: 50px;height: 40px;"> -->
+            Cart</a>
+          
+        </li>
+       
+      </ul>
+    </div>
+  </nav>
+
+<!-- ------------------------------second navbar------------------- -->
+
+  <nav class="navbar navbar-expand-lg navbar-light " style="height: 10px; background-color: rgba(0, 0, 0, 0.2);">
+    <div class="collapse navbar-collapse text-dark" id="navbarNavDropdown">
+      <ul class="navbar-nav text-dark">
+
+        <li class="nav-item dropdown " style=" font-family: Arial, sans-serif">
+            <a class="nav-link dropdown-toggle ml-5" href="#" id="navbarDropdownMenuLink" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="font-family: Arial, sans-serif">
+              Catergories
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink" style="border: 2px;border-radius: 25px;">
+              <a class="dropdown-item" href="#">Male</a>
+              <a class="dropdown-item" href="#">Female</a>
+              <a class="dropdown-item" href="#">Children</a>
+            </div>
+          </li>
+        <li class="nav-item active text-dark">
+          <a class="nav-link ml-5"  href="#" style=" font-family: Arial, sans-serif">Best Seller <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item text-dark">
+          <a class="nav-link ml-5" href="#" style=" font-family: Arial, sans-serif">Epic Deals</a>
+        </li>
+        <li class="nav-item text-dark">
+          <a class="nav-link ml-5" href="#" style="font-family: Arial, sans-serif">Customer Service</a>
+        </li>
+        <li class="nav-item text-dark">
+            <a class="nav-link ml-5" href="#" style=" font-family: Arial, sans-serif">Help</a>
+        </li>
+
+        
+      </ul>
+    </div>
+  </nav>
+
+
+<div class="container">
+  <div class="page-header">
+    <h1>Products
+      <div style="float: right; cursor: pointer;">
+        <span class="glyphicon glyphicon-shopping-cart my-cart-icon"><span class="badge badge-notify my-cart-badge"></span></span>
+      </div>
+    </h1>
+  </div>
+
+  <div class="row">
+    <div class="col-md-3 text-center">
+      <img src="images/beauty.png" width="150px" height="150px">
+      <br>
+      product 1 - <strong>$10</strong>
+      <br>
+      <button class="btn btn-danger my-cart-btn" data-id="1" data-name="product 1" data-summary="summary 1" data-price="10" data-quantity="1" data-image="images/img_1.png">Add to Cart</button>
+      <a href="#" class="btn btn-info">Details</a>
+    </div>
+
+    <div class="col-md-3 text-center">
+      <img src="images/brush.png" width="150px" height="150px">
+      <br>
+      product 2 - <strong>$20</strong>
+      <br>
+      <button class="btn btn-danger my-cart-btn" data-id="2" data-name="product 2" data-summary="summary 2" data-price="20" data-quantity="1" data-image="images/img_2.png">Add to Cart</button>
+      <a href="#" class="btn btn-info">Details</a>
+    </div>
+
+    <div class="col-md-3 text-center">
+      <img src="images/img_3.png" width="150px" height="150px">
+      <br>
+      product 3 - <strong>$30</strong>
+      <br>
+      <button class="btn btn-danger my-cart-btn" data-id="3" data-name="product 3" data-summary="summary 3" data-price="30" data-quantity="1" data-image="images/img_3.png">Add to Cart</button>
+      <a href="#" class="btn btn-info">Details</a>
+    </div>
+
+    <div class="col-md-3 text-center">
+      <img src="images/img_4.png" width="150px" height="150px">
+      <br>
+      product 4 - <strong>$40</strong>
+      <br>
+      <button class="btn btn-danger my-cart-btn" data-id="4" data-name="product 4" data-summary="summary 4" data-price="40" data-quantity="1" data-image="images/img_4.png">Add to Cart</button>
+      <a href="#" class="btn btn-info">Details</a>
+    </div>
+
+    <div class="col-md-3 text-center">
+      <img src="images/img_5.png" width="150px" height="150px">
+      <br>
+      product 5 - <strong>$50</strong>
+      <br>
+      <button class="btn btn-danger my-cart-btn" data-id="5" data-name="product 5" data-summary="summary 5" data-price="50" data-quantity="1" data-image="images/img_5.png">Add to Cart</button>
+      <a href="#" class="btn btn-info">Details</a>
+    </div>
+
+  </div>
+</div>	
+
+<footer class="text-center text-lg-start bg-light text-muted" style="margin-top: 200px;">
+    <!-- Section: Social media -->
+    <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom" >
+      <!-- Left -->
+      <div class="me-5 d-none d-lg-block text-black-50" >
+        <span>Get connected with us on social networks:</span>
+      </div>
+      <!-- Left -->
+  
+      <!-- Right -->
+      <div >
+        <a href="https://www.facebook.com/" class="me-4 link-secondary ml-5">
+          <i class="bi bi-facebook"></i>
+        </a>
+        <a href="https://twitter.com/i/flow/login" class="me-4 link-secondary ml-5">
+          <i class="bi bi-twitter"></i>
+        </a>
+        <a href="https://accounts.google.com/" class="me-4 link-secondary ml-5">
+          <i class="bi bi-google"></i>
+        </a>
+        <a href="https://www.instagram.com/" class="me-4 link-secondary ml-5">
+          <i class="bi bi-instagram"></i>
+        </a>
+        <a href="https://www.linkedin.com/home" class="me-4 link-secondary ml-5">
+          <i class="bi bi-linkedin"></i>
+        </a>
+        <a href="https://github.com/login" class="me-4 link-secondary ml-5">
+          <i class="bi bi-github"></i>
+        </a>
+  
+      </div>
+      <!-- Right -->
+    </section>
+    <!-- Section: Social media -->
+  
+    <!-- Section: Links  -->
+    <section class=""  >
+      <div class="container text-center text-md-start mt-5">
+        <!-- Grid row -->
+        <div class="row mt-3">
+          <!-- Grid column -->
+          <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+            <!-- Content -->
+            <h6 class="text-uppercase fw-bold mb-4">
+              <i class="fas fa-gem me-3"></i>Lets Connect Asia
+            </h6>
+            <p>
+              Here we are selling many products on wholesale rate and this website
+              will be helpfull for many peoples.
+            </p>
+          </div>
+          <!-- Grid column -->
+  
+          <!-- Grid column -->
+          <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+            <!-- Links -->
+            <h6 class="text-uppercase fw-bold mb-4">
+              Products
+            </h6>
+            <p>
+              <a href="#!" class="text-reset">Shoes</a>
+            </p>
+            <p>
+              <a href="#!" class="text-reset">Hoodie</a>
+            </p>
+            <p>
+              <a href="#!" class="text-reset">Shirts</a>
+            </p>
+            <p>
+              <a href="#!" class="text-reset">Trousers</a>
+            </p>
+          </div>
+          <!-- Grid column -->
+  
+          <!-- Grid column -->
+          <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+            <!-- Links -->
+            <h6 class="text-uppercase fw-bold mb-4">
+              Useful links
+            </h6>
+            <p>
+              <a href="#!" class="text-reset">Pricing</a>
+            </p>
+            <p>
+              <a href="#!" class="text-reset">Settings</a>
+            </p>
+            <p>
+              <a href="#!" class="text-reset">Orders</a>
+            </p>
+            <p>
+              <a href="#!" class="text-reset">Help</a>
+            </p>
+          </div>
+          <!-- Grid column -->
+  
+          <!-- Grid column -->
+          <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+            <!-- Links -->
+            <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
+            <p><i class="fas fa-home me-3"></i> NaqsTech Digital Marketing</p>
+            <p>
+              <i class="fas fa-envelope me-3"></i>
+              NaqsTechdigital@dreamhost.com
+            </p>
+            <p><i class="fas fa-phone me-3"></i> + 92 234 567 88</p>
+            <p><i class="fas fa-print me-3"></i> + 92 234 567 89</p>
+          </div>
+          <!-- Grid column -->
+        </div>
+        <!-- Grid row -->
+      </div>
+    </section>
+    <!-- Section: Links  -->
+  
+    <!-- Copyright -->
+    <div class="text-center p-4 text-black-50"  style="background-color: rgba(0, 0, 0, 0.2);">
+      © 2021 Copyright:
+      <a class="text-reset fw-bold" href="https://mdbootstrap.com/">MDBootstrap.com</a>
+    </div>
+    <!-- Copyright -->
+  </footer>
+		
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <script type='text/javascript' src="js/jquery.mycart/jquery.mycart.js"></script>
+  <script src="js/jquery.mycart.min.js"></script>
+  <script type="text/javascript">
+    
+  $(function () {
+
+    var goToCartIcon = function($addTocartBtn){
+      var $cartIcon = $(".my-cart-icon");
+      var $image = $('<img width="30px" height="30px" src="' + $addTocartBtn.data("image") + '"/>').css({"position": "fixed", "z-index": "999"});
+      $addTocartBtn.prepend($image);
+      var position = $cartIcon.position();
+      $image.animate({
+        top: position.top,
+        left: position.left
+      }, 500 , "linear", function() {
+        $image.remove();
+      });
+    }
+
+    $('.my-cart-btn').myCart({
+      classCartIcon: 'my-cart-icon',
+      classCartBadge: 'my-cart-badge',
+      classProductQuantity: 'my-product-quantity',
+      classProductRemove: 'my-product-remove',
+      classCheckoutCart: 'my-cart-checkout',
+      affixCartIcon: true,
+      showCheckoutModal: true,
+      clickOnAddToCart: function($addTocart){
+        goToCartIcon($addTocart);
+      },
+      clickOnCartIcon: function($cartIcon, products, totalPrice, totalQuantity) {
+        console.log("cart icon clicked", $cartIcon, products, totalPrice, totalQuantity);
+      },
+      checkoutCart: function(products, totalPrice, totalQuantity) {
+        console.log("checking out", products, totalPrice, totalQuantity);
+      },
+      getDiscountPrice: function(products, totalPrice, totalQuantity) {
+        console.log("calculating discount", products, totalPrice, totalQuantity);
+        return totalPrice * 0.5;
+      }
+    });
+
+  });
+  </script>
+</body>
+</html>
+
